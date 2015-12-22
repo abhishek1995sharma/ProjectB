@@ -1,0 +1,15 @@
+<div>
+	<form id="form-newBook" action="/books/create" method="POST">
+		<h2>Add book</h2>
+		<br>
+		<input type="text" placeholder="ISBN number" name="ISBN10">
+		<br>
+		<input type="text" placeholder="Name of book" name="title">
+		<br>
+		<input type="text" placeholder="Author" name="author">
+		<br>
+		<br>
+		<input type="submit" value="Add book">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

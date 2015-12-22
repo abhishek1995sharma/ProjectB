@@ -1,0 +1,17 @@
+<div>
+	<form id="form-editTransaction" action="/transactions/update/<%=transaction.id%>" method="POST">
+		<h2>Editing transaction</h2>
+		<br>
+		<input type="text" value="<%=transaction.catalog%>" name="catalog">
+		<br>
+		<input type="text" value="<%=transaction.type%>" name="type">
+		<br>
+		<input type="text" value="<%=transaction.price%>" name="price">
+		<br>
+		<input type="text" value="<%=transaction.quantity%>" name="quantity">
+		<br>
+		<br>
+		<input type="submit" value="Update">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

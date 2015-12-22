@@ -1,0 +1,36 @@
+<div>
+	<h3>Catalog</h3>
+	<table margin=10>
+		<tr>
+			<th>ID</th>
+			<th>User ID</th>
+			<th>Book ID</th>
+			<th>Quantity</th>
+			<th>Selling Price</th>
+			<th>Cost Price</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% _.each(catalog, function (catalogItem){ %>
+		<tr>
+			<td><%=catalogItem.id%></td>
+			<td><%=catalogItem.user%></td>
+			<td><%=catalogItem.book%></td>
+			<td><%=catalogItem.quantity%></td>
+			<td><%=catalogItem.sellingPrice%></td>
+			<td><%=catalogItem.costPrice%></td>
+			<td><a href="/catalog/show/<%=catalogItem.id%>">View</a></td>
+			<td><a href="/catalog/edit/<%=catalogItem.id%>">Edit</a></td>
+			<td>
+				<form action="/catalog/destroy/<%=catalogItem.id%>" method="POST">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="Delete">
+					<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				</form>
+			</td>
+		</tr>
+		<% })%>
+	</table>
+</div>

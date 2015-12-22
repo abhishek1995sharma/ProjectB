@@ -1,0 +1,57 @@
+<div>
+	<h3>Users</h3>
+	<table margin=10>
+		<tr>
+			<th>ID</th>
+			<th>Username</th>
+			<th>Real Name</th>
+			<th>Email</th>
+			<th>Admin</th>
+			<th>Created At</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% _.each(users, function (user){ %>
+		<tr>
+			<td><%=user.id%></td>
+			<td><%=user.username%></td>
+			<td><%=user.realname%></td>
+			<td><%=user.email%></td>
+			<td>
+				<%if(user.admin){%>
+				Yes
+				<%}else{%>
+				No
+				<%}%>
+			</td>
+			<th><%=user.createdAt%></th>
+			<td><a href="/users/show/<%=user.id%>">View</a></td>
+			<td><a href="/users/edit/<%=user.id%>">Edit</a></td>
+			<td>
+				<form action="/users/destroy/<%=user.id%>" method="POST">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="Delete">
+					<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				</form>
+			</td>
+			<td>
+				<%if(user.blocked){%>
+					<form action="/users/unblock/<%=user.id%>" method="POST">
+						<input type="hidden" name="_method" value="unblock">
+						<input type="submit" value="Unblock">
+						<input type="hidden" name="_csrf" value="<%= _csrf %>">
+					</form>
+				<%}else{%>
+					<form action="/users/block/<%=user.id%>" method="POST">
+						<input type="hidden" name="_method" value="block">
+						<input type="submit" value="Block">
+						<input type="hidden" name="_csrf" value="<%= _csrf %>">
+					</form>
+				<%}%>
+			</td>
+		</tr>
+		<% })%>
+	</table>
+</div>

@@ -1,0 +1,12 @@
+<div>
+	<h1><%= user.username%></h1>
+	<%if(user.admin){%>
+	Admin
+	<%}else{%>
+	User
+	<%}%>
+	<h3><%= user.realname%></h3>
+	<hr>
+	<h3>contact: <%= user.email%></h3>
+	<a href="/users/edit/<%=user.id%>">Edit</a>
+</div>
