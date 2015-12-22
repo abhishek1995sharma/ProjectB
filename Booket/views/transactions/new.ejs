@@ -1,0 +1,17 @@
+<div>
+	<form id="form-newTransaction" action="/transactions/create" method="POST">
+		<h2>New transaction</h2>
+		<br>
+		<input type="text" placeholder="Catalog ID" name="catalog">
+		<br>
+		<input type="text" placeholder="Type" name="type">
+		<br>
+		<input type="text" placeholder="Price" name="price">
+		<br>
+		<input type="text" placeholder="Quantity" name="quantity">
+		<br>
+		<br>
+		<input type="submit" value="Add">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

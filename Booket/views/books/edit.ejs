@@ -1,0 +1,15 @@
+<div>
+	<form id="form-editBook" action="/books/update/<%=book.id%>" method="POST">
+		<h2>Editing book</h2>
+		<br>
+		<input type="text" value="<%=book.ISBN10%>" name="ISBN10">
+		<br>
+		<input type="text" value="<%=book.title%>" name="title">
+		<br>
+		<input type="text" value="<%=book.author%>" name="author">
+		<br>
+		<br>
+		<input type="submit" value="Update">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

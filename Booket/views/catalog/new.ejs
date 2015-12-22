@@ -1,0 +1,19 @@
+<div>
+	<form id="form-newCatalogItem" action="/catalog/create" method="POST">
+		<h2>Add catalog item</h2>
+		<br>
+		<input type="text" placeholder="User ID" name="user">
+		<br>
+		<input type="text" placeholder="Book ID" name="book">
+		<br>
+		<input type="text" placeholder="quantity" name="quantity">
+		<br>
+		<input type="text" placeholder="Selling Price" name="sellingPrice">
+		<br>
+		<input type="text" placeholder="Cost Price" name="costPrice">
+		<br>
+		<br>
+		<input type="submit" value="Add catalog item">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

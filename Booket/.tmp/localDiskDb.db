@@ -1,0 +1,332 @@
+{
+  "data": {
+    "books": [
+      {
+        "author": "J. K. R.",
+        "id": 4,
+        "createdAt": "2015-09-13T08:05:14.366Z",
+        "updatedAt": "2015-09-13T08:05:14.366Z"
+      },
+      {
+        "ISBN10": "23",
+        "author": "jhj",
+        "id": 5,
+        "createdAt": "2015-09-18T16:25:43.702Z",
+        "updatedAt": "2015-09-18T16:25:43.702Z"
+      },
+      {
+        "ISBN10": "1234567890",
+        "title": "JNK",
+        "author": "jdijw",
+        "id": 6,
+        "createdAt": "2015-09-24T07:40:06.555Z",
+        "updatedAt": "2015-09-24T07:40:06.555Z"
+      }
+    ],
+    "catalog": [
+      {
+        "user": 4,
+        "book": 4,
+        "quantity": 6302424,
+        "sellingPrice": 10,
+        "costPrice": 500,
+        "id": 9,
+        "createdAt": "2015-09-13T08:06:00.613Z",
+        "updatedAt": "2015-09-24T06:16:41.660Z"
+      }
+    ],
+    "transactions": [
+      {
+        "type": "tt",
+        "price": 75,
+        "catalog": null,
+        "id": 5,
+        "createdAt": "2015-09-13T08:07:27.449Z",
+        "updatedAt": "2015-09-20T12:57:41.647Z"
+      },
+      {
+        "type": "hjh",
+        "price": 9,
+        "catalog": null,
+        "id": 6,
+        "createdAt": "2015-09-20T12:57:41.643Z",
+        "updatedAt": "2015-09-20T12:57:41.647Z"
+      },
+      {
+        "type": "kjk",
+        "price": 8787,
+        "catalog": null,
+        "id": 7,
+        "createdAt": "2015-09-20T12:58:33.212Z",
+        "updatedAt": "2015-09-20T12:58:33.217Z"
+      },
+      {
+        "type": "jhjk",
+        "price": 8978987,
+        "catalog": null,
+        "id": 8,
+        "createdAt": "2015-09-20T12:59:37.107Z",
+        "updatedAt": "2015-09-20T12:59:37.112Z"
+      },
+      {
+        "type": "buy",
+        "price": 32,
+        "catalog": null,
+        "id": 9,
+        "createdAt": "2015-09-24T05:18:00.006Z",
+        "updatedAt": "2015-09-24T05:18:00.014Z"
+      },
+      {
+        "type": "sell",
+        "price": 32,
+        "catalog": null,
+        "id": 10,
+        "createdAt": "2015-09-24T05:19:24.851Z",
+        "updatedAt": "2015-09-24T05:19:24.856Z"
+      },
+      {
+        "type": "buy",
+        "price": 23,
+        "quantity": 24,
+        "catalog": null,
+        "id": 11,
+        "createdAt": "2015-09-24T06:09:13.187Z",
+        "updatedAt": "2015-09-24T06:09:13.197Z"
+      },
+      {
+        "type": "buy",
+        "price": 32,
+        "quantity": 30,
+        "catalog": null,
+        "id": 12,
+        "createdAt": "2015-09-24T06:10:20.603Z",
+        "updatedAt": "2015-09-24T06:10:20.612Z"
+      },
+      {
+        "type": "buy",
+        "price": 10,
+        "quantity": 24,
+        "catalog": null,
+        "id": 13,
+        "createdAt": "2015-09-24T06:11:37.258Z",
+        "updatedAt": "2015-09-24T06:11:37.267Z"
+      },
+      {
+        "type": "buy",
+        "price": 750,
+        "quantity": 30,
+        "catalog": null,
+        "id": 14,
+        "createdAt": "2015-09-24T06:13:18.340Z",
+        "updatedAt": "2015-09-24T06:13:18.348Z"
+      },
+      {
+        "type": "buy",
+        "price": 75,
+        "quantity": 24,
+        "catalog": null,
+        "id": 15,
+        "createdAt": "2015-09-24T06:16:05.129Z",
+        "updatedAt": "2015-09-24T06:16:05.138Z"
+      },
+      {
+        "type": "sell",
+        "price": 75,
+        "quantity": 30,
+        "catalog": null,
+        "id": 16,
+        "createdAt": "2015-09-24T06:16:41.637Z",
+        "updatedAt": "2015-09-24T06:16:41.642Z"
+      }
+    ],
+    "users": [
+      {
+        "username": "a",
+        "realname": "a",
+        "email": "a@aol.com",
+        "encryptedPassword": "$2a$10$lFCGS6K/xnYCww4uRLMMgeuUGOuqhCkoRU2ex8C8Hspkm02CfPM.K",
+        "admin": true,
+        "blocked": false,
+        "id": 7,
+        "createdAt": "2015-10-03T11:33:33.000Z",
+        "updatedAt": "2015-10-03T11:51:48.493Z"
+      },
+      {
+        "username": "abhishek",
+        "realname": "Abhishek",
+        "email": "abhishek1995sharma@outlook.com",
+        "encryptedPassword": "$2a$10$mIuu/jfkQAzI.G.8owx.3.HkkSmWwv.sh0O./bXMwl6Dh6FPct9je",
+        "admin": false,
+        "blocked": true,
+        "id": 8,
+        "createdAt": "2015-10-03T11:34:09.256Z",
+        "updatedAt": "2015-10-03T11:49:22.196Z"
+      }
+    ]
+  },
+  "schema": {
+    "books": {
+      "ISBN10": {
+        "type": "string"
+      },
+      "ISBN13": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "publisher": {
+        "type": "string"
+      },
+      "desc": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "catalog": {
+      "user": {
+        "type": "integer",
+        "model": "users",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "book": {
+        "type": "integer",
+        "model": "books",
+        "foreignKey": true,
+        "alias": "book"
+      },
+      "quantity": {
+        "type": "integer"
+      },
+      "sellingPrice": {
+        "type": "float"
+      },
+      "costPrice": {
+        "type": "float"
+      },
+      "synced": {
+        "type": "boolean",
+        "defaultsTo": true
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "transactions": {
+      "type": {
+        "type": "string"
+      },
+      "price": {
+        "type": "float"
+      },
+      "quantity": {
+        "type": "integer"
+      },
+      "catalog": {
+        "type": "integer",
+        "model": "catalog",
+        "foreignKey": true,
+        "alias": "catalog"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "users": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "realname": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "type": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string"
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "admin": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "synced": {
+        "type": "boolean",
+        "defaultsTo": true
+      },
+      "blocked": {
+        "type": "boolean",
+        "defaultsTo": true
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "books": {
+      "id": 6
+    },
+    "catalog": {
+      "id": 10
+    },
+    "transactions": {
+      "id": 16
+    },
+    "users": {
+      "id": 8
+    }
+  }
+}

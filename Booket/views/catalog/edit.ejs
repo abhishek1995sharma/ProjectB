@@ -1,0 +1,19 @@
+<div>
+	<form id="form-editCatalogItem" action="/catalog/update/<%=catalogItem.id%>" method="POST">
+		<h2>Edit catalog item</h2>
+		<br>
+		<input type="text" value="<%=catalogItem.user%>" name="user">
+		<br>
+		<input type="text" value="<%=catalogItem.book%>" name="book">
+		<br>
+		<input type="text" value="<%=catalogItem.quantity%>" name="quantity">
+		<br>
+		<input type="text" value="<%=catalogItem.sellingPrice%>" name="sellingPrice">
+		<br>
+		<input type="text" value="<%=catalogItem.costPrice%>" name="costPrice">
+		<br>
+		<br>
+		<input type="submit" value="Edit catalog item">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

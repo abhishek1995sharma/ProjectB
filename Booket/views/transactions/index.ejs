@@ -1,0 +1,34 @@
+<div>
+	<h3>Transactions</h3>
+	<table margin=10>
+		<tr>
+			<th>ID</th>
+			<th>Catalog Id</th>
+			<th>Type</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% _.each(transactions, function (transaction){ %>
+		<tr>
+			<td><%=transaction.id%></td>
+			<td><%=transaction.catalog%></td>
+			<td><%=transaction.type%></td>
+			<td><%=transaction.price%></td>
+			<td><%=transaction.quantity%></td>
+			<td><a href="/transactions/show/<%=transaction.id%>">View</a></td>
+			<td><a href="/transactions/edit/<%=transaction.id%>">Edit</a></td>
+			<td>
+				<form action="/transactions/destroy/<%=transaction.id%>" method="POST">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="Delete">
+					<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				</form>
+			</td>
+		</tr>
+		<% })%>
+	</table>
+</div>

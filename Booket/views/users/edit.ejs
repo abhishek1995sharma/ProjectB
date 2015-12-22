@@ -1,0 +1,18 @@
+<div>
+	<form id="form-editUser" action="/users/update/<%=user.id%>" method="POST">
+		<h2>Editing user</h2>
+		<br>
+		<input type="text" value="<%=user.username%>" name="username">
+		<br>
+		<input type="text" value="<%=user.realname%>" name="realname">
+		<br>
+		<input type="text" value="<%=user.email%>" name="email">
+		<br>
+		<input type="hidden" name="admin" id="admin">
+		<input type="checkbox" name="makeAdmin" id="makeAdmin" <%if(user.admin){%>checked<%}%>> <label for="admin">Admin</label>
+		<br>
+		<br>
+		<input type="submit" value="Update">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
+	</form>
+</div>

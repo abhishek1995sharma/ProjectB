@@ -1,0 +1,32 @@
+<div>
+	<h3>Books</h3>
+	<table margin=10>
+		<tr>
+			<th>ID</th>
+			<th>ISBN</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+		<% _.each(books, function (book){ %>
+		<tr>
+			<td><%=book.id%></td>
+			<td><%=book.ISBN10%></td>
+			<td><%=book.title%></td>
+			<td><%=book.author%></td>
+			<td><a href="/books/show/<%=book.id%>">View</a></td>
+			<td><a href="/books/edit/<%=book.id%>">Edit</a></td>
+			<td>
+				<form action="/books/destroy/<%=book.id%>" method="POST">
+					<input type="hidden" name="_method" value="delete">
+					<input type="submit" value="Delete">
+					<input type="hidden" name="_csrf" value="<%= _csrf %>">
+				</form>
+			</td>
+		</tr>
+		<% })%>
+	</table>
+</div>
